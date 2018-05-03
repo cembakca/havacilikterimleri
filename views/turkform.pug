@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Kayıt Ekranı
+
+        // register form
+        form(method='POST' action='/api/turkeng')
+          div.form-group
+            label(for='turk', id='turk') Türkçesi:
+            input#name.form-control(type='text', placeholder='first and last' name='turk')
+            label(for='eng', id='eng') İngilizcesi:
+            input#name.form-control(type='text', placeholder='first and last' name='eng')
+            label(for='content', id='content') Açıklama:
+            input#name.form-control(type='text', placeholder='first and last' name='content')
+          button.btn.btn-primary(type='submit') Kaydet

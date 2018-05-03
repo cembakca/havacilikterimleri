@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Kayıt Ekranı
+
+        // register form
+        form(method='POST' action='/api/kisaltmalar')
+          div.form-group
+            label(for='title', id='title') Kısaltma:
+            input#name.form-control(type='text', placeholder='first and last' name='title')
+            label(for='meaning', id='meaning') Anlamı:
+            input#name.form-control(type='text', placeholder='first and last' name='meaning')
+            label(for='content', id='content') Açıklama:
+            input#name.form-control(type='text', placeholder='first and last' name='content')
+          button.btn.btn-primary(type='submit') Kaydet
